@@ -4,6 +4,7 @@ using System.Collections;
 public class OptionsManager : MonoBehaviour {
 
 
+	#region SINGLETON IMPLEMENTATION
 	private static OptionsManager _instance;
 
 	public static OptionsManager Instance
@@ -35,8 +36,11 @@ public class OptionsManager : MonoBehaviour {
 			}
 		}
 	}
+	#endregion
 
 
+	public bool IsSoundEnable = false;
+	public bool IsMouseEnable = false;
 
 
 

@@ -7,8 +7,10 @@ public class VisitorSelector : MonoBehaviour
 	RaycastHit hit;
 	Ray ray;
 	TargetManager target;
+	UnlightedTarget uTarget;
 
 	public SpriteRenderer SelectorSprite;
+	public Color BaseSpriteColor = new Color(1.0f,1.0f, 1.0f, 0.5f);
 	public Color SpriteColor = new Color(0.8f,0.5f, 0.5f, 1.0f);
 
 	public float LoadingTime = 1.5f;
@@ -39,6 +41,7 @@ public class VisitorSelector : MonoBehaviour
 		{
 
 			bool isDoorTargeted = false;
+			bool isUnlightedTargeted = false;
 
 			ray = new Ray (transform.position, transform.rotation * Vector3.forward * 10.0f);
 			Debug.DrawLine(transform.position, transform.position + transform.rotation * Vector3.forward * 10.0f, Color.red);
@@ -59,24 +62,48 @@ public class VisitorSelector : MonoBehaviour
 
 					}
 					else
-						SelectorSprite.color = new Color(1,1,1,1);
+						SelectorSprite.color = BaseSpriteColor;
 
 				}
-				else
-					SelectorSprite.color = new Color(1,1,1,1);
+				else // if it is not a door, check if it is an UnlightedTarget
+				{
+					uTarget = hit.transform.gameObject.GetComponent<UnlightedTarget>();
+					if( uTarget != null )
+					{
+						
+						if( hit.distance <= uTarget.DistanceOfInteraction )
+						{
+
+							isUnlightedTargeted = true;
+							SelectorSprite.color = SpriteColor;
+							
+						}
+						else
+							SelectorSprite.color = BaseSpriteColor;
+						
+					}
+				}
+
 			}
-			else
-				SelectorSprite.color = new Color(1,1,1,1);
 
 
-			if( isDoorTargeted )
+			if( isDoorTargeted || isUnlightedTargeted )
 			{
 				_loadingState += Time.deltaTime;
 				CircleBar.SetNewLoadingState(_loadingState/LoadingTime);
+				SelectorSprite.color = SpriteColor;
 				// if a door has been selected
 				if( _loadingState/LoadingTime >= 1.0f )
 				{
-					if( hit.transform.gameObject.tag.ToString() == "DoorLibrary1" )
+
+					// if it is door to main menu
+					if( hit.transform.gameObject.tag.ToString() == "DoorMainMenu" ) 
+					{
+						EndScene("MainMenu");
+					}
+
+					// if it is a door to go to a room
+					else if( hit.transform.gameObject.tag.ToString() == "DoorLibrary1" )
 					{
 						EndScene("Bibli1");
 					}
@@ -84,16 +111,23 @@ public class VisitorSelector : MonoBehaviour
 					{
 						EndScene("Mater1");
 					}
-					else if( hit.transform.gameObject.tag.ToString() == "DoorMainMenu" )
+
+					// if it is an object to interact with
+					else if(   hit.transform.gameObject.tag.ToString() == "ObjectTickSound"
+					        || hit.transform.gameObject.tag.ToString() == "ObjectTickMouse")
 					{
-						EndScene("MainMenu");
+						uTarget.LaunchAction();
+						_loadingState = -WaitingTime;
+						CircleBar.SetNewLoadingState(_loadingState/LoadingTime);
 					}
+
 				}
 			}
 			else
 			{
 				_loadingState = -WaitingTime;
 				CircleBar.SetNewLoadingState(_loadingState/LoadingTime);
+				SelectorSprite.color = BaseSpriteColor;
 			}
 
 		}
