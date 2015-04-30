@@ -1,0 +1,352 @@
+fileFormatVersion: 2
+guid: 6f7f3eff87bbd5747bb08d04612a02e1
+timeCreated: 1430396302
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Box001
+    100002: Box001 1
+    100004: Box002
+    100006: Box003
+    100008: Box029
+    100010: Box030
+    100012: Box031
+    100014: Box032
+    100016: Box046
+    100018: Briques
+    100020: CrayonBleu
+    100022: CrayonBleu 1
+    100024: CrayonBleu001
+    100026: CrayonBleu002
+    100028: CrayonJaune
+    100030: CrayonJaune001
+    100032: CrayonJaune002
+    100034: CrayonMarron
+    100036: CrayonMarron 1
+    100038: CrayonMarron001
+    100040: CrayonMarron002
+    100042: CrayonNoir
+    100044: CrayonNoir001
+    100046: CrayonNoir002
+    100048: CrayonRouge
+    100050: CrayonRouge001
+    100052: CrayonRouge002
+    100054: CrayonVert
+    100056: CrayonVert 1
+    100058: CrayonVert001
+    100060: CrayonVert002
+    100062: Cylinder001
+    100064: Cylinder001 1
+    100066: Cylinder001 2
+    100068: Cylinder001 3
+    100070: Cylinder001 4
+    100072: Cylinder002
+    100074: Cylinder003
+    100076: Cylinder007
+    100078: Cylinder008
+    100080: Cylinder009
+    100082: Cylinder010
+    100084: Cylinder011
+    100086: Cylinder012
+    100088: Cylinder013
+    100090: Cylinder014
+    100092: Cylinder015
+    100094: Cylinder016
+    100096: Cylinder017
+    100098: Cylinder018
+    100100: Cylinder019
+    100102: Cylinder020
+    100104: Cylinder021
+    100106: Cylinder022
+    100108: //RootNode
+    100110: TB1
+    100112: TB2
+    100114: TB3
+    400000: Box001
+    400002: Box001 1
+    400004: Box002
+    400006: Box003
+    400008: Box029
+    400010: Box030
+    400012: Box031
+    400014: Box032
+    400016: Box046
+    400018: Briques
+    400020: CrayonBleu
+    400022: CrayonBleu 1
+    400024: CrayonBleu001
+    400026: CrayonBleu002
+    400028: CrayonJaune
+    400030: CrayonJaune001
+    400032: CrayonJaune002
+    400034: CrayonMarron
+    400036: CrayonMarron 1
+    400038: CrayonMarron001
+    400040: CrayonMarron002
+    400042: CrayonNoir
+    400044: CrayonNoir001
+    400046: CrayonNoir002
+    400048: CrayonRouge
+    400050: CrayonRouge001
+    400052: CrayonRouge002
+    400054: CrayonVert
+    400056: CrayonVert 1
+    400058: CrayonVert001
+    400060: CrayonVert002
+    400062: Cylinder001
+    400064: Cylinder001 1
+    400066: Cylinder001 2
+    400068: Cylinder001 3
+    400070: Cylinder001 4
+    400072: Cylinder002
+    400074: Cylinder003
+    400076: Cylinder007
+    400078: Cylinder008
+    400080: Cylinder009
+    400082: Cylinder010
+    400084: Cylinder011
+    400086: Cylinder012
+    400088: Cylinder013
+    400090: Cylinder014
+    400092: Cylinder015
+    400094: Cylinder016
+    400096: Cylinder017
+    400098: Cylinder018
+    400100: Cylinder019
+    400102: Cylinder020
+    400104: Cylinder021
+    400106: Cylinder022
+    400108: //RootNode
+    400110: TB1
+    400112: TB2
+    400114: TB3
+    2300000: Box001
+    2300002: Box001 1
+    2300004: Box002
+    2300006: Box003
+    2300008: Box029
+    2300010: Box030
+    2300012: Box031
+    2300014: Box032
+    2300016: Box046
+    2300018: Briques
+    2300020: CrayonBleu
+    2300022: CrayonBleu 1
+    2300024: CrayonBleu001
+    2300026: CrayonBleu002
+    2300028: CrayonJaune
+    2300030: CrayonJaune001
+    2300032: CrayonJaune002
+    2300034: CrayonMarron
+    2300036: CrayonMarron 1
+    2300038: CrayonMarron001
+    2300040: CrayonMarron002
+    2300042: CrayonNoir
+    2300044: CrayonNoir001
+    2300046: CrayonNoir002
+    2300048: CrayonRouge
+    2300050: CrayonRouge001
+    2300052: CrayonRouge002
+    2300054: CrayonVert
+    2300056: CrayonVert 1
+    2300058: CrayonVert001
+    2300060: CrayonVert002
+    2300062: Cylinder001
+    2300064: Cylinder001 1
+    2300066: Cylinder001 2
+    2300068: Cylinder001 3
+    2300070: Cylinder001 4
+    2300072: Cylinder002
+    2300074: Cylinder003
+    2300076: Cylinder007
+    2300078: Cylinder008
+    2300080: Cylinder009
+    2300082: Cylinder010
+    2300084: Cylinder011
+    2300086: Cylinder012
+    2300088: Cylinder013
+    2300090: Cylinder014
+    2300092: Cylinder015
+    2300094: Cylinder016
+    2300096: Cylinder017
+    2300098: Cylinder018
+    2300100: Cylinder019
+    2300102: Cylinder020
+    2300104: Cylinder021
+    2300106: Cylinder022
+    2300108: TB1
+    2300110: TB2
+    2300112: TB3
+    3300000: Box001
+    3300002: Box001 1
+    3300004: Box002
+    3300006: Box003
+    3300008: Box029
+    3300010: Box030
+    3300012: Box031
+    3300014: Box032
+    3300016: Box046
+    3300018: Briques
+    3300020: CrayonBleu
+    3300022: CrayonBleu 1
+    3300024: CrayonBleu001
+    3300026: CrayonBleu002
+    3300028: CrayonJaune
+    3300030: CrayonJaune001
+    3300032: CrayonJaune002
+    3300034: CrayonMarron
+    3300036: CrayonMarron 1
+    3300038: CrayonMarron001
+    3300040: CrayonMarron002
+    3300042: CrayonNoir
+    3300044: CrayonNoir001
+    3300046: CrayonNoir002
+    3300048: CrayonRouge
+    3300050: CrayonRouge001
+    3300052: CrayonRouge002
+    3300054: CrayonVert
+    3300056: CrayonVert 1
+    3300058: CrayonVert001
+    3300060: CrayonVert002
+    3300062: Cylinder001
+    3300064: Cylinder001 1
+    3300066: Cylinder001 2
+    3300068: Cylinder001 3
+    3300070: Cylinder001 4
+    3300072: Cylinder002
+    3300074: Cylinder003
+    3300076: Cylinder007
+    3300078: Cylinder008
+    3300080: Cylinder009
+    3300082: Cylinder010
+    3300084: Cylinder011
+    3300086: Cylinder012
+    3300088: Cylinder013
+    3300090: Cylinder014
+    3300092: Cylinder015
+    3300094: Cylinder016
+    3300096: Cylinder017
+    3300098: Cylinder018
+    3300100: Cylinder019
+    3300102: Cylinder020
+    3300104: Cylinder021
+    3300106: Cylinder022
+    3300108: TB1
+    3300110: TB2
+    3300112: TB3
+    4300000: Box002
+    4300002: Box001
+    4300004: CrayonBleu
+    4300006: CrayonRouge
+    4300008: CrayonVert
+    4300010: CrayonMarron
+    4300012: CrayonNoir
+    4300014: CrayonBleu001
+    4300016: CrayonRouge001
+    4300018: CrayonVert001
+    4300020: CrayonJaune001
+    4300022: CrayonMarron001
+    4300024: CrayonNoir001
+    4300026: CrayonBleu002
+    4300028: CrayonRouge002
+    4300030: CrayonVert002
+    4300032: CrayonJaune002
+    4300034: CrayonMarron002
+    4300036: CrayonNoir002
+    4300038: Box001
+    4300040: Box003
+    4300042: Cylinder001
+    4300044: Cylinder002
+    4300046: Cylinder003
+    4300048: CrayonBleu
+    4300050: CrayonJaune
+    4300052: CrayonMarron
+    4300054: CrayonVert
+    4300056: Briques
+    4300058: Cylinder001
+    4300060: Cylinder007
+    4300062: Cylinder008
+    4300064: Cylinder009
+    4300066: Cylinder010
+    4300068: Cylinder011
+    4300070: Cylinder012
+    4300072: Cylinder001
+    4300074: Cylinder013
+    4300076: Cylinder014
+    4300078: Cylinder015
+    4300080: Cylinder001
+    4300082: Cylinder016
+    4300084: Cylinder017
+    4300086: Box029
+    4300088: Box030
+    4300090: Cylinder018
+    4300092: Cylinder019
+    4300094: Box031
+    4300096: Box032
+    4300098: Cylinder001
+    4300100: Cylinder020
+    4300102: Cylinder021
+    4300104: Cylinder022
+    4300106: TB3
+    4300108: TB2
+    4300110: TB1
+    4300112: Box046
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
