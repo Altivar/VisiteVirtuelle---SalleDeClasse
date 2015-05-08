@@ -1,0 +1,97 @@
+fileFormatVersion: 2
+guid: 7642bacec2576734d836ba116cf3d178
+timeCreated: 1430407002
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Plafond
+    100002: //RootNode
+    100004: TapisDoorGroup
+    100006: TapisLibraryGroup
+    100008: TapisMainGroup
+    100010: TapisTheatreGroup
+    100012: vitre
+    400000: Plafond
+    400002: //RootNode
+    400004: TapisDoorGroup
+    400006: TapisLibraryGroup
+    400008: TapisMainGroup
+    400010: TapisTheatreGroup
+    400012: vitre
+    2300000: Plafond
+    2300002: TapisDoorGroup
+    2300004: TapisLibraryGroup
+    2300006: TapisMainGroup
+    2300008: TapisTheatreGroup
+    2300010: vitre
+    3300000: Plafond
+    3300002: TapisDoorGroup
+    3300004: TapisLibraryGroup
+    3300006: TapisMainGroup
+    3300008: TapisTheatreGroup
+    3300010: vitre
+    4300000: Plafond
+    4300002: TapisMainGroup
+    4300004: vitre
+    4300006: TapisDoorGroup
+    4300008: TapisTheatreGroup
+    4300010: TapisLibraryGroup
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
