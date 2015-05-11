@@ -22,6 +22,10 @@ public class InformationPanelManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
+
+		if( OptionsManager.Instance.IsSoundEnable)
+			return;
+
 		Vector3 diffLocation = this.transform.position - (Visitor.transform.position - this.transform.position);
 		this.transform.LookAt(diffLocation);
 

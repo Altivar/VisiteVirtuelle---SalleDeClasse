@@ -24,6 +24,9 @@ public class VisitorBezierManager : MonoBehaviour {
 	void Update () 
 	{
 
+		if(OptionsManager.Instance.IsMouseEnable)
+			return;
+
 		if( _isInDecelrator )
 		{
 			if( temporaryMultiplicator > 0.1f )
