@@ -12,6 +12,13 @@ public class InformationPanelManager : MonoBehaviour {
 	public Material Mat;
 	private float _alpha;
 
+	// Called at beginning
+	void Start()
+	{
+		_alpha = 0;
+		Mat.SetFloat("_Alpha", _alpha);
+	}
+
 	// Update is called once per frame
 	void Update () 
 	{
