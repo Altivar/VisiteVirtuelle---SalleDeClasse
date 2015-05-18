@@ -14,6 +14,8 @@ public class VisitorBezierManager : MonoBehaviour {
 	private bool _isInDecelrator = false;
 	private float temporaryMultiplicator = 1.0f;
 
+	private bool _isRailOver = false;
+
 
 	// Use this for initialization
 	void Start () {
@@ -25,6 +27,9 @@ public class VisitorBezierManager : MonoBehaviour {
 	{
 
 		if(OptionsManager.Instance.IsMouseEnable)
+			return;
+
+		if (_isRailOver)
 			return;
 
 		if( _isInDecelrator )
@@ -40,15 +45,16 @@ public class VisitorBezierManager : MonoBehaviour {
 		if( temporaryMultiplicator > 1.0f) temporaryMultiplicator = 1.0f;
 		if( temporaryMultiplicator < 0.1f) temporaryMultiplicator = 0.1f;
 
-		Debug.Log(temporaryMultiplicator);
-
 		alpha += Time.deltaTime * Speed * 0.01f * temporaryMultiplicator;
 		if(alpha >= 1f)
 		{
 			if(Loop)
 				alpha = 0f;
 			else
+			{
 				alpha = 0.999f;
+				_isRailOver = true;
+			}
 		}
 
 		Transform trsf = rail.GetPosition (alpha, transform);
