@@ -20,10 +20,10 @@ public class Bezier : MonoBehaviour
 	[HideInInspector]
 	public float lenght = -1f;
 	
-	private Vector3 b0 = Vector3.zero;
-	private Vector3 b1 = Vector3.zero;
-	private Vector3 b2 = Vector3.zero;
-	private Vector3 b3 = Vector3.zero;
+//	private Vector3 b0 = Vector3.zero;
+//	private Vector3 b1 = Vector3.zero;
+//	private Vector3 b2 = Vector3.zero;
+	//	private Vector3 b3 = Vector3.zero;;
 	
 	private float Ax;
 	private float Ay;
@@ -123,7 +123,7 @@ public class Bezier : MonoBehaviour
 		}
 		catch(Exception e)
 		{
-			Debug.LogWarning("Il manque un point sur une courbe de Bezier, espèce de magicarpe");
+			Debug.LogWarning("Il manque un point sur une courbe de Bezier, espèce de magicarpe " + e.ToString());
 		}
 	}
 	#endif

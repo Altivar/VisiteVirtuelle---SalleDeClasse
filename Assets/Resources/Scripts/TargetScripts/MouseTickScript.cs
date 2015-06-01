@@ -26,7 +26,7 @@ public class MouseTickScript : UnlightedTarget
 			TickTransform.localPosition = new Vector3(0, -0.2f, -0.001f);
 			_isEnable = true;
 		}
-
+		//TODO Audiomanager -> son du papier
 		OptionsManager.Instance.IsMouseEnable = _isEnable;
 		
 	}
