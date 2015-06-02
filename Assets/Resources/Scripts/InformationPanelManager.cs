@@ -8,6 +8,7 @@ public class InformationPanelManager : MonoBehaviour {
 	public float DisableDistance = 4.0f;
 	private bool _isActivated = false;
 	private bool _changingState = false;
+	public string textKey = "";
 
 	public Material Mat;
 	public TextMesh Text;
@@ -18,6 +19,8 @@ public class InformationPanelManager : MonoBehaviour {
 	{
 		_alpha = 0;
 		Mat.SetFloat("_Alpha", _alpha);
+		Text.text = Localization.Get (textKey);
+		Text.text = Text.text.Replace (":n:", "\n");
 	}
 
 	// Update is called once per frame

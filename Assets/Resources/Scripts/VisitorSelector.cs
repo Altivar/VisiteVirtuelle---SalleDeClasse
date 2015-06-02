@@ -120,7 +120,8 @@ public class VisitorSelector : MonoBehaviour
 
 					// if it is an object to interact with
 					else if(   hit.transform.gameObject.tag.ToString() == "ObjectTickSound"
-					        || hit.transform.gameObject.tag.ToString() == "ObjectTickMouse")
+					        || hit.transform.gameObject.tag.ToString() == "ObjectTickMouse"
+					        || hit.transform.gameObject.tag.ToString() == "Flag")
 					{
 						uTarget.LaunchAction();
 						_loadingState = -WaitingTime;

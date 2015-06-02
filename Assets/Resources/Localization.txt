@@ -1,3 +1,5 @@
 French,English
 COMMON_YES,"Oui","Yes"
 COMMON_NO,"Non","No"
+BIBLI_1_INFO_1,"Texte d'info pour la bibli 1","Informative Text for Bibli 1"
+BIBLI_1_INFO_2,"Texte d'info pour la bibli 1:n::n:avec un retour à la ligne en plus !","Informative Text for Bibli 1:n::n:blablablablabla blabla bla !"
