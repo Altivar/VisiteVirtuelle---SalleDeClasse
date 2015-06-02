@@ -9,6 +9,7 @@ public class Localization {
 	private static int curLanguage = 0;
 	private static List<string> keys = null;
 	private static Dictionary<string, string[]> locTab = null;
+	private static List<Localize> registerText = new List<Localize>();
 
 	internal static bool LoadLocalization()
 	{
@@ -57,6 +58,24 @@ public class Localization {
 			keys.Add (each);
 	}
 
+	internal static void RegisterText(Localize text)
+	{
+		registerText.Add (text);
+	}
+
+	internal static void UnregisterText(Localize text)
+	{
+		registerText.Remove (text);
+	}
+
+	static void UpdateTexts()
+	{
+		foreach(Localize each in registerText)
+		{
+			each.UpdateText();
+		}
+	}
+
 	static void AddEntry(string[] stream)
 	{
 		string[] line = new string[keys.Count];
@@ -77,6 +96,7 @@ public class Localization {
 		{
 			Debug.LogError("No Language found for: " + newLanguage);
 		}
+		UpdateTexts ();
 	}
 
 	internal static string Get(string key)
