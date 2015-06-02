@@ -10,4 +10,8 @@ public class UnlightedTarget : MonoBehaviour
 	{
 	}
 
+	public virtual void UpdateAtBeginning()
+	{
+	}
+
 }

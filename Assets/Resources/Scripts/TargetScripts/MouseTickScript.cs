@@ -10,7 +10,7 @@ public class MouseTickScript : UnlightedTarget
 	void Start()
 	{
 		_isEnable = !OptionsManager.Instance.IsMouseEnable;
-		LaunchAction();
+		UpdateAtBeginning();
 	}
 
 	override public void LaunchAction()
@@ -31,6 +31,20 @@ public class MouseTickScript : UnlightedTarget
 			AudioManager.Instance.PlaySound("PaperWriting");
 		OptionsManager.Instance.IsMouseEnable = _isEnable;
 		
+	}
+
+	override public void UpdateAtBeginning()
+	{
+		if( _isEnable )
+		{
+			TickTransform.localPosition = new Vector3(0, -0.2f, 0.001f);
+			_isEnable = false;
+		}
+		else
+		{
+			TickTransform.localPosition = new Vector3(0, -0.2f, -0.001f);
+			_isEnable = true;
+		}
 	}
 
 }

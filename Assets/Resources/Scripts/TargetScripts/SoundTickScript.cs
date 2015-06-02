@@ -10,7 +10,7 @@ public class SoundTickScript : UnlightedTarget
 	void Start()
 	{
 		_isEnable = !OptionsManager.Instance.IsSoundEnable;
-		LaunchAction();
+		UpdateAtBeginning();
 	}
 
 	override public void LaunchAction()
@@ -30,6 +30,20 @@ public class SoundTickScript : UnlightedTarget
 		OptionsManager.Instance.IsSoundEnable = _isEnable;
 		if( OptionsManager.Instance.IsSoundEnable )
 			AudioManager.Instance.PlaySound("PaperWriting");
+	}
+
+	override public void UpdateAtBeginning()
+	{
+		if( _isEnable )
+		{
+			TickTransform.localPosition = new Vector3(0, -0.2f, 0.001f);
+			_isEnable = false;
+		}
+		else
+		{
+			TickTransform.localPosition = new Vector3(0, -0.2f, -0.001f);
+			_isEnable = true;
+		}
 	}
 
 }
