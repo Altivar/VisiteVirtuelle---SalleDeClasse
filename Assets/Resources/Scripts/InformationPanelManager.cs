@@ -10,6 +10,7 @@ public class InformationPanelManager : MonoBehaviour {
 	private bool _changingState = false;
 
 	public Material Mat;
+	public TextMesh Text;
 	private float _alpha;
 
 	// Called at beginning
@@ -59,6 +60,7 @@ public class InformationPanelManager : MonoBehaviour {
 				}
 			}
 			Mat.SetFloat("_Alpha", _alpha);
+			Text.color = new Color(1,1,1,_alpha);
 		}
 		else
 		{
