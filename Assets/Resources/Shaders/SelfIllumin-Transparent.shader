@@ -5,11 +5,13 @@
     }
 
     SubShader {        
-	Tags{"Queue" = "Transparent" }
+	Tags{"Queue" = "Transparent"}
 	Pass {
-			Blend SrcAlpha OneMinusSrcAlpha 
+			Blend SrcAlpha OneMinusSrcAlpha
+			ZWrite On
+			ZTest Always
             CGPROGRAM
-            #pragma vertex vert_img
+            #pragma vertex vert
             #pragma fragment frag
 
             #include "UnityCG.cginc"
@@ -17,6 +19,11 @@
             uniform sampler2D _MainTex;
             uniform float _Alpha;
 			uniform fixed4 _Color;
+			
+			void vert(float4 v:POSITION, out float4 sv:SV_POSITION)
+			{
+				sv = mul (UNITY_MATRIX_MVP, v);
+			}
 
             float4 frag(v2f_img i) : COLOR 
 			{		 
