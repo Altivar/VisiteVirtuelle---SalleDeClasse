@@ -26,10 +26,10 @@ public class SoundTickScript : UnlightedTarget
 			TickTransform.localPosition = new Vector3(0, -0.2f, -0.001f);
 			_isEnable = true;
 		}
-		
-		//TODO Audiomanager -> son du papier
+
 		OptionsManager.Instance.IsSoundEnable = _isEnable;
-		
+		if( OptionsManager.Instance.IsSoundEnable )
+			AudioManager.Instance.PlaySound("PaperWriting");
 	}
 
 }

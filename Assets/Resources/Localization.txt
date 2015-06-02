@@ -1,0 +1,3 @@
+French,English
+COMMON_YES,"Oui","Yes"
+COMMON_NO,"Non","No"

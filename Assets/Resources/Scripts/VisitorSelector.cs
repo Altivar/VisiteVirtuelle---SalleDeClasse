@@ -99,20 +99,22 @@ public class VisitorSelector : MonoBehaviour
 					// if it is door to main menu
 					if( hit.transform.gameObject.tag.ToString() == "DoorMainMenu" ) 
 					{
-						
-						//TODO Audiomanager -> son de la porte
+						if( OptionsManager.Instance.IsSoundEnable )
+							AudioManager.Instance.PlaySound("DoorsOpening");
 						EndScene("MainMenu");
 					}
 
 					// if it is a door to go to a room
 					else if( hit.transform.gameObject.tag.ToString() == "DoorLibrary1" )
 					{
-						//TODO Audiomanager -> son de la porte
+						if( OptionsManager.Instance.IsSoundEnable )
+							AudioManager.Instance.PlaySound("DoorsOpening");
 						EndScene("Bibli1");
 					}
 					else if( hit.transform.gameObject.tag.ToString() == "DoorKinderGarten1" )
 					{
-						//TODO Audiomanager -> son de la porte
+						if( OptionsManager.Instance.IsSoundEnable )
+							AudioManager.Instance.PlaySound("DoorsOpening");
 						EndScene("Mater1");
 					}
 

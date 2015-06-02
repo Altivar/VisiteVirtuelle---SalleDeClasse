@@ -15,7 +15,7 @@ public class MouseTickScript : UnlightedTarget
 
 	override public void LaunchAction()
 	{
-		
+	
 		if( _isEnable )
 		{
 			TickTransform.localPosition = new Vector3(0, -0.2f, 0.001f);
@@ -26,7 +26,9 @@ public class MouseTickScript : UnlightedTarget
 			TickTransform.localPosition = new Vector3(0, -0.2f, -0.001f);
 			_isEnable = true;
 		}
-		//TODO Audiomanager -> son du papier
+
+		if( OptionsManager.Instance.IsSoundEnable )
+			AudioManager.Instance.PlaySound("PaperWriting");
 		OptionsManager.Instance.IsMouseEnable = _isEnable;
 		
 	}
