@@ -25,6 +25,9 @@ public class Localize : MonoBehaviour {
 	{
 		text.text = Localization.Get (key);
 		text.text = text.text.Replace (":n:", "\n");
+		text.text = text.text.Replace (":eg:", "è");
+		text.text = text.text.Replace (":ea:", "é");
+		text.text = text.text.Replace (":v:", ",");
 		text.text = text.text.Replace ("\"", "");
 	}
 }

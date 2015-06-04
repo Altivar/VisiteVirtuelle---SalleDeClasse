@@ -1,5 +1,5 @@
 French,English
 COMMON_YES,"Oui","Yes"
 COMMON_NO,"Non","No"
-BIBLI_1_INFO_1,"Texte d'info pour la bibli 1","Informative Text for Bibli 1"
-BIBLI_1_INFO_2,"Texte d'info pour la bibli 1:n::n:avec un retour à la ligne en plus !","Informative Text for Bibli 1:n::n:blablablablabla blabla bla !"
+BIBLI_1_INFO_1,"La Microsoft Sur40 est une table :ea:quip:ea:e :n:d'un :ea:cran tactile.:n:Elle supporte plus de 50 points de contact :n:ce qui permet un usage collaboratif.","The Microsoft Sur40 is an interactive table. :n:It can support over 50 touches simultaneously:v::n:which allows a collaborative using."
+BIBLI_1_INFO_2,"Les tablettes tactiles sont des ardoises :n::ea:lectroniques.:n:Elle permettent un usage facile et intuitif.","The touch pads are electronic slates. :n:They allow an easy and intuitive usage."

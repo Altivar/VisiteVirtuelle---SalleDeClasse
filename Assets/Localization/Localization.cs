@@ -110,4 +110,9 @@ public class Localization {
 		Debug.LogWarning ("No Key for: "+key);
 		return "";
 	}
+
+	internal static int GetCurrentKey()
+	{
+		return curLanguage;
+	}
 }
