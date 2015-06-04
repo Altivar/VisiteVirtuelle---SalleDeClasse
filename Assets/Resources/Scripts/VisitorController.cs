@@ -20,7 +20,9 @@ public class VisitorController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		
+
+	#if UNITY_EDITOR
+
 		rotationX += Input.GetAxis("Mouse X")*lookSpeed;
 		
 		while(rotationX > 180.0f)
@@ -53,7 +55,22 @@ public class VisitorController : MonoBehaviour {
 			rb.AddForce( this.transform.rotation * new Vector3(-moveSpeed * 1000.0f * Time.deltaTime, 0, 0) );
 		}
 		///[Keyboard Gesture]///
-		
+
+
+		#elif UNITY_ANDROID
+
+		if( Input.GetMouseButton(0) )
+		{
+			//this.transform.Translate( new Vector3(0,0, moveSpeed * Time.deltaTime), Space.Self);
+			rb.AddForce( this.transform.rotation * new Vector3(0,0, moveSpeed * 1000.0f * Time.deltaTime) );
+		}
+		else if( Input.GetMouseButton(1) )
+		{
+			//this.transform.Translate( new Vector3(0,0, -moveSpeed * Time.deltaTime), Space.Self);
+			rb.AddForce( this.transform.rotation * new Vector3(0,0, -moveSpeed * 1000.0f * Time.deltaTime) );
+		}
+
+		#endif
 		
 		// keep the rigidbody velocity at (0,0,0)
 		rb.velocity = _continuousVelocity;
