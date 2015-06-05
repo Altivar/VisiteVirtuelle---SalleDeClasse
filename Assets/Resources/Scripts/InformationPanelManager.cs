@@ -12,7 +12,8 @@ public class InformationPanelManager : MonoBehaviour {
 	public Material Mat;
 	public TextMesh Text;
 	private float _alpha;
-
+	private int _currentSound = -1;
+	public string [] AudioDescription = null;
 	// Called at beginning
 	void Start()
 	{
@@ -24,14 +25,10 @@ public class InformationPanelManager : MonoBehaviour {
 	void Update () 
 	{
 
-		if( OptionsManager.Instance.IsSoundEnable)
-			return;
+
 
 		Vector3 diffLocation = this.transform.position - (Visitor.transform.position - this.transform.position);
 		this.transform.LookAt(diffLocation);
-
-
-
 
 		if( _changingState )
 		{
@@ -49,14 +46,31 @@ public class InformationPanelManager : MonoBehaviour {
 			}
 			else
 			{
-				if( _alpha < 1)
+				if (OptionsManager.Instance.IsSoundEnable) 
 				{
-					_alpha += 2 * Time.deltaTime;
+					if(AudioDescription[Localization.LanguageID] != null)
+					{
+						if (_currentSound != -1)
+							AudioManager.Instance.StopSound(_currentSound);
+						_currentSound = AudioManager.Instance.PlaySound(AudioDescription[Localization.LanguageID],false);
+					}
+					else 
+						Debug.LogWarning("Le nom du son n'a pas été ajouté");
+					_changingState = false;
+					_isActivated = true;
+					return;
 				}
 				else
 				{
-					_changingState = false;
-					_isActivated = true;
+					if( _alpha < 1)
+					{
+						_alpha += 2 * Time.deltaTime;
+					}
+					else
+					{
+						_changingState = false;
+						_isActivated = true;
+					}
 				}
 			}
 			Mat.SetFloat("_Alpha", _alpha);
@@ -71,7 +85,6 @@ public class InformationPanelManager : MonoBehaviour {
 			{
 				if( distance > DisableDistance)
 					_changingState = true;
-				
 			}
 			else
 			{
@@ -79,10 +92,5 @@ public class InformationPanelManager : MonoBehaviour {
 					_changingState = true;
 			}
 		}
-
-
-
 	}
-
-
 }

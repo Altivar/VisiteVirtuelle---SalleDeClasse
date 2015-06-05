@@ -11,6 +11,14 @@ public class Localization {
 	private static Dictionary<string, string[]> locTab = null;
 	private static List<Localize> registerText = new List<Localize>();
 
+	internal static int LanguageID
+	{ 
+		get 
+		{ 
+			return curLanguage;
+		}
+	}
+
 	internal static bool LoadLocalization()
 	{
 		keys = new List<string> ();
