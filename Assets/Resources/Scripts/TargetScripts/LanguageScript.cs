@@ -13,5 +13,8 @@ public class LanguageScript : UnlightedTarget {
 		Localization.SetLanguage(LanguageKey);
 		FlagTransform.position = _activationTransform.position;
 		FlagTransform.rotation = _activationTransform.rotation;
+
+		if( OptionsManager.Instance.IsSoundEnable )
+			AudioManager.Instance.PlaySound("FlagChanging");
 	}
 }
