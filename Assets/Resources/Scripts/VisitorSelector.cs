@@ -25,6 +25,8 @@ public class VisitorSelector : MonoBehaviour
 	public Material FadeMaterial;
 	private string _sceneToLoad;
 
+	public Transform origin = null;
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -43,8 +45,8 @@ public class VisitorSelector : MonoBehaviour
 			bool isDoorTargeted = false;
 			bool isUnlightedTargeted = false;
 
-			ray = new Ray (transform.position, transform.rotation * Vector3.forward * 10.0f);
-			Debug.DrawLine(transform.position, transform.position + transform.rotation * Vector3.forward * 10.0f, Color.red);
+			ray = new Ray (origin.position, origin.rotation * Vector3.forward * 10.0f);
+			Debug.DrawLine(origin.position, origin.position + origin.rotation * Vector3.forward * 10.0f, Color.red);
 			if (Physics.Raycast(ray, out hit))
 			{
 				target = hit.transform.gameObject.GetComponent<TargetManager>();

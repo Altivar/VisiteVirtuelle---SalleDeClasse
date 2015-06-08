@@ -7,6 +7,7 @@
 
     SubShader {        
 	Tags{"Queue" = "Overlay" "RenderType"="Transparent"}
+	ZTEST always
 	Pass {
 			Blend SrcAlpha OneMinusSrcAlpha 
 //			Tags { "Queue"="Opaque" "RenderType"="Opaque" }
@@ -27,7 +28,7 @@
 	            sv = mul (UNITY_MATRIX_MVP, v);
 	        }
 
-	        void frag(float2 uv:TEXCOORD0 ,out float4 Color:COLOR, out float Depth:DEPTH)
+	        void frag(float2 uv:TEXCOORD0 ,out float4 Color:COLOR)
 	        {
 	        	Color = tex2D(_MainTex, uv);
 	        	float angle = atan2(uv.x-0.5f, uv.y-0.5f);
@@ -38,7 +39,7 @@
 				}
 				Color *= _Color;
 				
-	        	Depth = 0.0f;
+	        	//Depth = 0.0f;
 	        }
 
 //            float4 frag(v2f_img i) : COLOR 
