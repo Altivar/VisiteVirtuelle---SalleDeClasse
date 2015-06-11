@@ -59,7 +59,8 @@ public class AudioManager : MonoBehaviour {
 
 	internal void StopSound(int a_SoundID)
 	{
-		_audioSrcList [a_SoundID].Stop ();
+		if(_audioSrcList.Count > a_SoundID && _audioSrcList[a_SoundID] != null)
+			_audioSrcList [a_SoundID].Stop ();
 	}
 
 	private int GetFreeAudioSourceID()
