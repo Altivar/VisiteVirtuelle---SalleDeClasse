@@ -274,9 +274,9 @@ public class OpenDiveSensor : MonoBehaviour
 			if(!mbMagnetDown)
 			{
 #if UNITY_EDITOR
-			if(Input.GetKey(KeyCode.Space))
+				if(Input.GetKey(KeyCode.Space) || Input.GetMouseButtonDown(0))
 #else
-				if(DInput.magnet_trigger == 1)
+				if(DInput.magnet_trigger == 1 || Input.GetMouseButtonDown(0))
 #endif
 				{
 					mbMagnetDown = true;

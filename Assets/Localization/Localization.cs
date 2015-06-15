@@ -25,33 +25,25 @@ public class Localization {
 		locTab = new Dictionary<string, string[]> ();
 		try
 		{
-			string line;
 			// Create a new StreamReader, tell it which file to read and what encoding the file
 			// was saved as
-			StreamReader theReader = new StreamReader("Assets/Resources/Localization.txt", Encoding.Default);
+			TextAsset textAsset = Resources.Load("Localization") as TextAsset;
 
-			using (theReader)
+			string[] linesFromfile = textAsset.text.Split(new char[] { '\n' });
+			foreach(string line in linesFromfile)
 			{
-				// While there's lines left in the text file, do this:
-				do
+				if (line != null)
 				{
-					line = theReader.ReadLine();
-					
-					if (line != null)
-					{
-						string[] entries = line.Split(',');
+					string[] entries = line.Split(',');
 
-						if(keys.Count == 0)
-							LoadLanguages(entries);
-						else
-							AddEntry(entries);
-					}
+					if(keys.Count == 0)
+						LoadLanguages(entries);
+					else
+						AddEntry(entries);
 				}
-				while (line != null);
-
-				theReader.Close();
-				return true;
 			}
+
+			return true;
 		}
 		catch (System.Exception e)
 		{
