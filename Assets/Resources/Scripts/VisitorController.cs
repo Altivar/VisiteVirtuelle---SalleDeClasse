@@ -10,6 +10,8 @@ public class VisitorController : MonoBehaviour {
 	
 	private Rigidbody rb;
 	private Vector3 _continuousVelocity = new Vector3(0,0,0);
+
+	public Transform DiveTrsf;
 	
 	// Use this for initialization
 	void Start () 
@@ -37,22 +39,22 @@ public class VisitorController : MonoBehaviour {
 		if(Input.GetKey(KeyCode.Z) || Input.GetKey(KeyCode.UpArrow))
 		{
 			//this.transform.Translate( new Vector3(0,0, moveSpeed * Time.deltaTime), Space.Self);
-			rb.AddForce( this.transform.rotation * new Vector3(0,0, moveSpeed * 1000.0f * Time.deltaTime) );
+			rb.AddForce( DiveTrsf.rotation * new Vector3(0,0, moveSpeed * 1000.0f * Time.deltaTime) );
 		}
 		else if(Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
 		{
 			//this.transform.Translate( new Vector3(0,0, -moveSpeed * Time.deltaTime), Space.Self);
-			rb.AddForce( this.transform.rotation * new Vector3(0,0, -moveSpeed * 1000.0f * Time.deltaTime) );
+			rb.AddForce( DiveTrsf.rotation * new Vector3(0,0, -moveSpeed * 1000.0f * Time.deltaTime) );
 		}
 		if(Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
 		{
 			//this.transform.Translate( new Vector3(moveSpeed * Time.deltaTime, 0, 0), Space.Self);
-			rb.AddForce( this.transform.rotation * new Vector3(moveSpeed * 1000.0f * Time.deltaTime, 0, 0) );
+			rb.AddForce( DiveTrsf.rotation * new Vector3(moveSpeed * 1000.0f * Time.deltaTime, 0, 0) );
 		}
 		else if(Input.GetKey(KeyCode.Q) || Input.GetKey(KeyCode.LeftArrow))
 		{
 			//this.transform.Translate( new Vector3(-moveSpeed * Time.deltaTime, 0, 0), Space.Self);
-			rb.AddForce( this.transform.rotation * new Vector3(-moveSpeed * 1000.0f * Time.deltaTime, 0, 0) );
+			rb.AddForce( DiveTrsf.rotation * new Vector3(-moveSpeed * 1000.0f * Time.deltaTime, 0, 0) );
 		}
 		///[Keyboard Gesture]///
 

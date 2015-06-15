@@ -12,7 +12,7 @@ public class InformationPanelManager : MonoBehaviour {
 	public Material Mat;
 	public TextMesh Text;
 	private float _alpha;
-	private int _currentSound = -1;
+	private static int _currentSound = -1;
 	public string [] AudioDescription = null;
 	// Called at beginning
 	void Start()
