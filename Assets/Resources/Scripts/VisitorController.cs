@@ -17,6 +17,7 @@ public class VisitorController : MonoBehaviour {
 	void Start () 
 	{
 		rb = this.GetComponent<Rigidbody>();
+		Cursor.visible = false;
 	}
 	
 	// Update is called once per frame
@@ -36,12 +37,12 @@ public class VisitorController : MonoBehaviour {
 		
 		
 		///[Keyboard Gesture]///
-		if(Input.GetKey(KeyCode.Z) || Input.GetKey(KeyCode.UpArrow))
+		if(Input.GetKey(KeyCode.Z) || Input.GetKey(KeyCode.UpArrow) || Input.GetMouseButton(0))
 		{
 			//this.transform.Translate( new Vector3(0,0, moveSpeed * Time.deltaTime), Space.Self);
 			rb.AddForce( DiveTrsf.rotation * new Vector3(0,0, moveSpeed * 1000.0f * Time.deltaTime) );
 		}
-		else if(Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+		else if(Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow) || Input.GetMouseButton(1))
 		{
 			//this.transform.Translate( new Vector3(0,0, -moveSpeed * Time.deltaTime), Space.Self);
 			rb.AddForce( DiveTrsf.rotation * new Vector3(0,0, -moveSpeed * 1000.0f * Time.deltaTime) );
@@ -64,12 +65,12 @@ public class VisitorController : MonoBehaviour {
 		if( Input.GetMouseButton(0) )
 		{
 			//this.transform.Translate( new Vector3(0,0, moveSpeed * Time.deltaTime), Space.Self);
-			rb.AddForce( this.transform.rotation * new Vector3(0,0, moveSpeed * 1000.0f * Time.deltaTime) );
+			rb.AddForce( DiveTrsf.rotation * new Vector3(0,0, moveSpeed * 1000.0f * Time.deltaTime) );
 		}
 		else if( Input.GetMouseButton(1) )
 		{
 			//this.transform.Translate( new Vector3(0,0, -moveSpeed * Time.deltaTime), Space.Self);
-			rb.AddForce( this.transform.rotation * new Vector3(0,0, -moveSpeed * 1000.0f * Time.deltaTime) );
+			rb.AddForce( DiveTrsf.rotation * new Vector3(0,0, -moveSpeed * 1000.0f * Time.deltaTime) );
 		}
 
 		#endif
